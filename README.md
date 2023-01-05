@@ -116,6 +116,8 @@ Generate color theme for your app: [Use palette generator](https://coolors.co/ge
     - UserId
   - `Meals` or `Cocktails` table:
     - ...fields same as provided by API
+    - ...custom fields (decide what fields you want to add)
+    - CretedByUser (true/false)
     - UserId
 2. Check if user is authorized before showing page content
 3. Show the **Sign in page** if user isn't authorized
@@ -139,7 +141,7 @@ Generate color theme for your app: [Use palette generator](https://coolors.co/ge
 
 1. Page consists of two parts:
   - Left sidebar (occupies full window height)
-  - Content (verically scrollable)
+  - Content (vertically scrollable)
 2. Sidebar consists of:
   - App logo
   - Filter section, that contains form divided on parts (only one can be active at a time):
@@ -166,3 +168,37 @@ Generate color theme for your app: [Use palette generator](https://coolors.co/ge
     - Add infinit scroll or pagination for this list (add support on backend side for this feature)
 
 #### Item card
+
+Item card consists of parts:
+- Title
+- Heart icon OR Trash bin icon:
+  - If item is from external API show heart:
+    - Outlined - if it's not in user's list
+    - Filled - if it's already in user's list
+
+      * When user clicks on outlined heart icon - add it to your db and show in `My list`, fill heart
+      * When user clicks on filled heart icon - remove item from db, remove from `My list`, make heart outlined
+  - If item is created by user (it has `CreatedByUser` property and it equals to `true`) show Trash bin icon:
+      * When user clicks on icon remove item from db and `My list` 
+- Item photo
+- Main details (such as `Category`, `Area`, `Tags`, `Glass` etc., but not recipe or video)
+- `Details` button:
+  - On click show the **Details** modal or page (decide what is the best approach for you)
+
+#### Details modal / page
+
+- Show all available details about item, such as recipe, ingredients, video, your custom fields etc.
+- Show `Add to My List` / `Remove from My List` / `Delete item` button (depends on what item you are looking at the moment)
+- Show `Edit item` button for items from My List.
+
+#### Mew item | Edit item modal
+
+- Show form with all necessary fields
+- Make some fields required (title, category, photo, recipe etc.)
+- Add a couple of custom fields. Some ideas:
+  - Cooking time
+  - Rating
+  - Number of portions
+  - Complexity
+  - Best for
+  - ...
