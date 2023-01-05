@@ -163,7 +163,7 @@ Use this [Mate Academy topic](https://mate.academy/learn/nodejs/auth-nodejs) to 
     - Icons & links to your GitHub, LinkedIn, and Facebook profiles
 3. Content consists of sections:
   - `Search/Filter results` OR `Random item`:
-    - If the user didn't submit filter the form, show the random item from the API
+    - If the user didn't submit the serach/filter form, show the random item from the API
     - If the user submitted the form, show results **both** from API and user list as cards
     - If no data is found or error - show a message instead of results
     - If the user cleared the form - show the new random item from the API
