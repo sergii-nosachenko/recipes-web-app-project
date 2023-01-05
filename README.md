@@ -36,6 +36,7 @@ Your task is to create a web app that allows users to search for meal/cocktail r
 - ORM (choose your option):
   - [Sequalize ORM](https://sequelize.org/)
   - [Prisma](https://www.prisma.io/)
+  - [TypeORM](https://typeorm.io/)
 - [PostgreSQL](https://www.postgresql.org/) database hosted on (choose your option):
   - [ElephantSQL](https://www.elephantsql.com/)
   - [Fly.io](https://fly.io/), [how to docs](https://medium.com/data-folks-indonesia/setup-free-postgresql-on-fly-io-and-import-database-3f8f891cbc71) (* free, but needs credit card on registration)
@@ -96,7 +97,7 @@ Choose the UI component library you like:
   - [React Bulma](https://react-bulma.dev/en)
   - [Semantic UI React](https://react.semantic-ui.com/)
 
-You can find basic app design [here](). It doesn't have styles and strict limitations - use it only as a reference. The overall look of your app depends on the UI library and your own ideas.
+You can find basic app design [here](https://www.figma.com/file/TCzDyN152kGZsz45rJRagq/Meals%2FCocktails-Web-App?node-id=0%3A1&t=E3LunTTq4C1JjOoa-1). It doesn't have styles and strict limitations - use it only as a reference. The overall look of your app depends on the UI library and your own ideas.
 
 Additional icons you can use:
 - [Choose any here](https://iconscout.com/blog/best-react-icons-library)
@@ -145,11 +146,16 @@ Use this [Mate Academy topic](https://mate.academy/learn/nodejs/auth-nodejs) to 
 
 ### Main page
 
-1. Page consists of two parts:
+1. Page consists of 3 parts:
+  - Header
   - Left sidebar (occupies full window height)
   - Content (vertically scrollable)
-2. Sidebar consists of:
+2. Header consists of:
   - App logo
+  - `My list` button (scrolls content to user's list section)
+  - `Add new` button (shows modal with a form to add new entity)
+  - `Log out` button (clear token and shows the **Sign-in page**)
+3. Sidebar consists of:
   - Filter section, that contains form divided into parts (only one can be active at a time):
     - Search by title (text input field)
     - Filter by ... fields (text input field with suggestions in dropdown select - look for available data in API docs)
@@ -158,24 +164,21 @@ Use this [Mate Academy topic](https://mate.academy/learn/nodejs/auth-nodejs) to 
       - On click calls external API, get results, but also filters and adds items from My list to results array
     - `Clear` button (active after the user submitted the form):
       - On click resets all form inputs, clear results and show random item from external API as recommendation
-  - `My list` button (scrolls content to user's list section)
-  - `Add new` button (shows modal with a form to add new entity)
-  - `Log out` button (clear token and shows the **Sign-in page**)
   - Contacts section:
     - Icons & links to your GitHub, LinkedIn, and Facebook profiles
-3. Content consists of sections:
+4. Content consists of sections:
   - `Search/Filter results` OR `Random item`:
     - If the user didn't submit the serach/filter form, show the random item from the API
     - If the user submitted the form, show results **both** from API and user list as cards
     - If no data is found or error - show a message instead of results
     - If the user cleared the form - show the new random item from the API
-    - Show only 12 first items and the `Show more` button
+    - Show only 6 first items and the `Show more` button
     - On the `Show more` button click show 3 more items, and repeat until there are items to show
   - `My list`:
     - If no entries in the list or error - show a message
     - Show items as cards
     - Show items count
-    - Add infinite scroll or pagination for this list (add support on the backend side for this feature)
+    - Add infinite scroll, pagination or `Show more` button for this list (add support on the backend side for this feature)
 
 #### Item card
 
