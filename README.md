@@ -77,3 +77,23 @@ Your task is to create web app that allows to search for recipes, store favourit
 - Ask the mentor to give you feedback
 - Add project to your portfolio
 - Profit!
+
+## API
+
+You can choose between two APIs:
+- [Meals](https://www.themealdb.com/api.php)
+- [Cocktails](https://www.thecocktaildb.com/api.php)
+
+You choice will determine what your app will be:
+- Cooking app
+- Party app
+
+## App structure wireframe
+
+You can find basic app design [here](). It doesn't have styles and strict limitations - use it only as reference. Overall look of your app depends on UI library and your own ideas.
+
+## Features
+
+### Login page
+
+1. 
