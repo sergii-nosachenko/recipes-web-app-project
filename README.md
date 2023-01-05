@@ -94,6 +94,34 @@ You can find basic app design [here](). It doesn't have styles and strict limita
 
 ## Features
 
-### Login page
+### Basic rules
 
-1. 
+1. Your app needs to have 3 db tables:
+  - `Users` table:
+    - Name
+    - Email
+    - Salt
+    - Hashed_password
+  - `Tokens` table:
+    - RefreshToken
+    - UserId
+  - `Meals` or `Cocktails` table:
+    - ...fields same as provided by API
+    - UserId
+2. Check if user is authorized before showing page content
+3. Show the **Sign in page** if user isn't authorized
+4. Show the **404 page** for unknown routes 
+
+### Sign in page
+
+1. Show the form centered on screen
+2. Show `Sign in` <> `Register` switch
+3. When `Sign in` is active show only `Email` and `Password` fields. On submit check entered user data:
+  - proceed to the **Main page** if email & password are correct (issue new auth token)
+  - show error message in other case
+4. When `Register` is active show `Name`, `Email`, `Password` and `Repeat password` fields. On submit check entered user data:
+  - all fields are required and can't be empty
+  - passwords should match
+  - email needs to be correct and unique (no such user in db)
+  - proceed to the **Main page** if all fields are correct (issue new auth token)
+  - show error message in other cases
