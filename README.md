@@ -154,8 +154,10 @@ Use this [Mate Academy topic](https://mate.academy/learn/nodejs/auth-nodejs) to 
     - Search by title (text input field)
     - Filter by ... fields (text input field with suggestions in dropdown select - look for available data in API docs)
       - For example: `Filter by Category` will be a dropdown select with a list of all available categories and input fields, so the user can type text and filter that list. He can select a category from the filtered list.
-    - `Submit` button (active if the user entered/selected something)
-    - `Clear` button (active after the user submitted the form)
+    - `Submit` button (active if the user entered/selected something):
+      - On click calls external API, get results, but also filters and adds items from My list to results array
+    - `Clear` button (active after the user submitted the form):
+      - On click resets all form inputs, clear results and show random item from external API as recommendation
   - `My list` button (scrolls content to user's list section)
   - `Add new` button (shows modal with a form to add new entity)
   - `Log out` button (clear token and shows the **Sign-in page**)
