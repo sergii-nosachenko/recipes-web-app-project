@@ -172,6 +172,7 @@ Use this [Mate Academy topic](https://mate.academy/learn/nodejs/auth-nodejs) to 
   - `My list`:
     - If no entries in the list or error - show a message
     - Show items as cards
+    - Show items count
     - Add infinite scroll or pagination for this list (add support on the backend side for this feature)
 
 #### Item card
@@ -187,6 +188,8 @@ Item card consists of the parts:
       * When a user clicks on the filled heart icon - remove the item from DB, remove it from `My list`, and make the heart outlined
   - If the item is created by the user (it has the `CreatedByUser` property and it equals to `true`) show the Trash bin icon:
       * When a user clicks on the icon remove the item from the DB and `My list` 
+- Edit icon (only for items from My List):
+  - On click show the **Edit item** modal
 - Item photo
 - Main details (such as `Category`, `Area`, `Tags`, `Glass` etc., but not a recipe or video…)
 - `Details` button:
@@ -211,3 +214,5 @@ Item card consists of the parts:
   - Complexity
   - Best for
   - ...
+- Show the `Save` button (save data into your DB, update content
+- Show the `Cancel` button
