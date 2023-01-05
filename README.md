@@ -64,11 +64,11 @@ Your task is to create a web app that allows users to search for meal/cocktail r
 - Create a dummy frontend page with the `Hello world!` text and run it. Check if all works correctly.
 - Create a dummy backend endpoint with the `Hello world!` text and request it. Check if all works correctly.
 - Choose UI library and API (read next chapter)
-- Test API endpoints directly or use [Postman](https://www.postman.com/)
+- Test external API endpoints directly or use [Postman](https://www.postman.com/)
 - Write a step-by-step plan for your development. **Add a realistic deadline to your calendar!** It will take 3-5 working days to complete this task.
 - Start developing, feature-by-feature, commit-by-commit (remember, you need to have a nice commit history!).
 - Test your application
-- When completed, create an extended `readme.md` file ([example](https://gist.github.com/solaryasha/0fb46a864b490afd618f2c4751a65041), [constructor](https://readme.so/)) for both frontend and backend parts
+- When completed, create an extended `readme.md` file(s) ([example](https://gist.github.com/solaryasha/0fb46a864b490afd618f2c4751a65041), [constructor](https://readme.so/)) for both frontend and backend parts
 - Deploy your project so it can be viewed online
 - Ask the mentor to give you feedback
 - Add project to your portfolio
@@ -79,6 +79,8 @@ Your task is to create a web app that allows users to search for meal/cocktail r
 You can choose between two APIs:
 - [Meals](https://www.themealdb.com/api.php)
 - [Cocktails](https://www.thecocktaildb.com/api.php)
+
+*These APIs are free to use. If you want some additional features - you can pay $2. Read more about it in API docs.*
 
 Your choice will determine what your app will be:
 - Cooking app
