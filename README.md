@@ -158,6 +158,7 @@ Use this [Mate Academy topic](https://mate.academy/learn/nodejs/auth-nodejs) to 
     - `Clear` button (active after the user submitted the form)
   - `My list` button (scrolls content to user's list section)
   - `Add new` button (shows modal with a form to add new entity)
+  - `Log out` button (clear token and shows the **Sign-in page**)
   - Contacts section:
     - Icons & links to your GitHub, LinkedIn, and Facebook profiles
 3. Content consists of sections:
