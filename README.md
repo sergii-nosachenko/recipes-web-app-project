@@ -1,6 +1,6 @@
 # Meals/Cocktails Web App
 
-Your task is to create web app that allows to search for meal / cocktail recipes, store favourite ones and add new to db.
+Your task is to create a web app that allows users to search for meal/cocktail recipes, store favourite ones and add new ones to DB.
 
 ## Technologie stack
 
@@ -78,13 +78,13 @@ You can choose between two APIs:
 - [Meals](https://www.themealdb.com/api.php)
 - [Cocktails](https://www.thecocktaildb.com/api.php)
 
-You choice will determine what your app will be:
+Your choice will determine what your app will be:
 - Cooking app
 - Party app
 
 ## Design & theme
 
-Choose UI component library you like:
+Choose the UI component library you like:
   - [Grommet](https://v2.grommet.io/)
   - [Material UI](https://mui.com/)
   - [React Bootstrap](https://react-bootstrap.github.io/)
@@ -92,7 +92,7 @@ Choose UI component library you like:
   - [React Bulma](https://react-bulma.dev/en)
   - [Semantic UI React](https://react.semantic-ui.com/)
 
-You can find basic app design [here](). It doesn't have styles and strict limitations - use it only as reference. Overall look of your app depends on UI library and your own ideas.
+You can find basic app design [here](). It doesn't have styles and strict limitations - use it only as a reference. The overall look of your app depends on the UI library and your own ideas.
 
 Additional icons you can use:
 - [Choose any here](https://iconscout.com/blog/best-react-icons-library)
@@ -105,7 +105,7 @@ Generate color theme for your app: [Use palette generator](https://coolors.co/ge
 
 ### Basic rules
 
-1. Your app needs to have 3 db tables:
+1. Your app needs to have 3 DB tables:
   - `Users` table:
     - Name
     - Email
@@ -119,21 +119,21 @@ Generate color theme for your app: [Use palette generator](https://coolors.co/ge
     - ...custom fields (decide what fields you want to add)
     - CretedByUser (true/false)
     - UserId
-2. Check if user is authorized before showing page content
-3. Show the **Sign in page** if user isn't authorized
+2. Check if the user is authorized before showing page content
+3. Show the **Sign-in page** if the user isn't authorized
 4. Show the **404 page** for unknown routes 
 
-### Sign in page
+### Sign-in page
 
-1. Show the form centered on screen
-2. Show `Sign in` <> `Register` switch
-3. When `Sign in` is active show only `Email` and `Password` fields. On submit check entered user data:
+1. Show the form centered on the screen
+2. Show the `Sign-in` <> `Register` switch
+3. When `Sign-in` is active show only the `Email` and `Password` fields. On submit check entered user data:
   - proceed to the **Main page** if email & password are correct (issue new auth token)
-  - show error message in other case
-4. When `Register` is active show `Name`, `Email`, `Password` and `Repeat password` fields. On submit check entered user data:
+  - show error message in other cases
+4. When `Register` is active show the `Name`, `Email`, `Password`, and `Repeat password` fields. On submit check entered user data:
   - all fields are required and can't be empty
   - passwords should match
-  - email needs to be correct and unique (no such user in db)
+  - email needs to be correct and unique (no such user in DB)
   - proceed to the **Main page** if all fields are correct (issue new auth token)
   - show error message in other cases
 
@@ -144,57 +144,57 @@ Generate color theme for your app: [Use palette generator](https://coolors.co/ge
   - Content (vertically scrollable)
 2. Sidebar consists of:
   - App logo
-  - Filter section, that contains form divided on parts (only one can be active at a time):
+  - Filter section, that contains form divided into parts (only one can be active at a time):
     - Search by title (text input field)
-    - Filter by ... fields (text input field with suggestions in dropdown select - look for availabe data in API docs)
-      - For example: `Filter by Category` will be a dropdown select with list of all available categories and input field, so user can type text and filter that list. He can select category from the filtered list.
-    - `Submit` button (active if user entered / selected something)
-    - `Clear` button (active after user submitted form)
+    - Filter by ... fields (text input field with suggestions in dropdown select - look for available data in API docs)
+      - For example: `Filter by Category` will be a dropdown select with a list of all available categories and input fields, so the user can type text and filter that list. He can select a category from the filtered list.
+    - `Submit` button (active if the user entered/selected something)
+    - `Clear` button (active after the user submitted the form)
   - `My list` button (scrolls content to user's list section)
-  - `Add new` button (shows modal with form to add new entity)
+  - `Add new` button (shows modal with a form to add new entity)
   - Contacts section:
-    - Icons & links to your Github, LinkedIn, Facebook profiles
+    - Icons & links to your GitHub, LinkedIn, and Facebook profiles
 3. Content consists of sections:
   - `Search/Filter results` OR `Random item`:
-    - If user didn't submit filter the form, show random item from API
-    - If user submitted the form, show results **both** from API and user list as cards
-    - If no data found or error - show message instead of results
-    - If user cleared the form - show new random item from API
-    - Show only 12 first items and `Show more` button
-    - On `Show more` button click show 3 more items, repeat until there are items to show
+    - If the user didn't submit filter the form, show the random item from the API
+    - If the user submitted the form, show results **both** from API and user list as cards
+    - If no data is found or error - show a message instead of results
+    - If the user cleared the form - show the new random item from the API
+    - Show only 12 first items and the `Show more` button
+    - On the `Show more` button click show 3 more items, and repeat until there are items to show
   - `My list`:
-    - If no entries in list or error - show message
+    - If no entries in the list or error - show a message
     - Show items as cards
-    - Add infinit scroll or pagination for this list (add support on backend side for this feature)
+    - Add infinite scroll or pagination for this list (add support on the backend side for this feature)
 
 #### Item card
 
-Item card consists of parts:
+Item card consists of the parts:
 - Title
 - Heart icon OR Trash bin icon:
-  - If item is from external API show heart:
-    - Outlined - if it's not in user's list
-    - Filled - if it's already in user's list
+  - If the item is from an external API show heart:
+    - Outlined - if it's not in the user's list
+    - Filled - if it's already in the user's list
 
-      * When user clicks on outlined heart icon - add it to your db and show in `My list`, fill heart
-      * When user clicks on filled heart icon - remove item from db, remove from `My list`, make heart outlined
-  - If item is created by user (it has `CreatedByUser` property and it equals to `true`) show Trash bin icon:
-      * When user clicks on icon remove item from db and `My list` 
+      * When a user clicks on outlined heart icon - add it to your DB and show it in `My list`, fill in the heart
+      * When a user clicks on the filled heart icon - remove the item from DB, remove it from `My list`, and make the heart outlined
+  - If the item is created by the user (it has the `CreatedByUser` property and it equals to `true`) show the Trash bin icon:
+      * When a user clicks on the icon remove the item from the DB and `My list` 
 - Item photo
-- Main details (such as `Category`, `Area`, `Tags`, `Glass` etc., but not recipe or video)
+- Main details (such as `Category`, `Area`, `Tags`, `Glass` etc., but not a recipe or video…)
 - `Details` button:
   - On click show the **Details** modal or page (decide what is the best approach for you)
 
 #### Details modal / page
 
-- Show all available details about item, such as recipe, ingredients, video, your custom fields etc.
-- Show `Add to My List` / `Remove from My List` / `Delete item` button (depends on what item you are looking at the moment)
-- Show `Edit item` button for items from My List.
+- Show all available details about the item, such as a recipe, ingredients, video, custom fields, etc
+- Show the `Add to My List` / `Remove from My List` / `Delete item` button (depends on what item you are looking at now)
+- Show the `Edit item` button for items from My List.
 
 #### Mew item | Edit item modal
 
 - Show form with all necessary fields
-- Make some fields required (title, category, photo, recipe etc.)
+- Make some fields required (title, category, photo, recipe, etc)
 - Add a couple of custom fields. Some ideas:
   - Cooking time
   - Rating
