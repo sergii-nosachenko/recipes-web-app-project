@@ -1,6 +1,6 @@
-# Recipes Web App
+# Meals/Cocktails Web App
 
-Your task is to create web app that allows to search for recipes, store favourite ones and add new to db
+Your task is to create web app that allows to search for meal / cocktail recipes, store favourite ones and add new to db.
 
 ## Technologie stack
 
@@ -15,13 +15,7 @@ Your task is to create web app that allows to search for recipes, store favourit
   - [React Query](https://react-query-v3.tanstack.com/)
   - [Redux Toolkit](https://redux-toolkit.js.org/)
   - [tRPC client](https://trpc.io/docs/quickstart) + [Zustand](https://github.com/pmndrs/zustand)
-- UI component library (choose your option):
-  - [Grommet](https://v2.grommet.io/)
-  - [Material UI](https://mui.com/)
-  - [React Bootstrap](https://react-bootstrap.github.io/)
-  - [Chakra UI](https://chakra-ui.com/)
-  - [React Bulma](https://react-bulma.dev/en)
-  - [Semantic UI React](https://react.semantic-ui.com/)
+- UI component library
 - Typescript
 - ESLint, Prettier, and Pre-commit
 - Hosted on (choose your option):
@@ -88,9 +82,24 @@ You choice will determine what your app will be:
 - Cooking app
 - Party app
 
-## App structure wireframe
+## Design & theme
+
+Choose UI component library you like:
+  - [Grommet](https://v2.grommet.io/)
+  - [Material UI](https://mui.com/)
+  - [React Bootstrap](https://react-bootstrap.github.io/)
+  - [Chakra UI](https://chakra-ui.com/)
+  - [React Bulma](https://react-bulma.dev/en)
+  - [Semantic UI React](https://react.semantic-ui.com/)
 
 You can find basic app design [here](). It doesn't have styles and strict limitations - use it only as reference. Overall look of your app depends on UI library and your own ideas.
+
+Additional icons you can use:
+- [Choose any here](https://iconscout.com/blog/best-react-icons-library)
+
+Generate color theme for your app: [Use palette generator](https://coolors.co/generate)
+
+**Try not to use the default UI kit colors! Your app needs to be unique, so use different colors!**
 
 ## Features
 
@@ -125,3 +134,35 @@ You can find basic app design [here](). It doesn't have styles and strict limita
   - email needs to be correct and unique (no such user in db)
   - proceed to the **Main page** if all fields are correct (issue new auth token)
   - show error message in other cases
+
+### Main page
+
+1. Page consists of two parts:
+  - Left sidebar (occupies full window height)
+  - Content (verically scrollable)
+2. Sidebar consists of:
+  - App logo
+  - Filter section, that contains form divided on parts (only one can be active at a time):
+    - Search by title (text input field)
+    - Filter by ... fields (text input field with suggestions in dropdown select - look for availabe data in API docs)
+      - For example: `Filter by Category` will be a dropdown select with list of all available categories and input field, so user can type text and filter that list. He can select category from the filtered list.
+    - `Submit` button (active if user entered / selected something)
+    - `Clear` button (active after user submitted form)
+  - `My list` button (scrolls content to user's list section)
+  - `Add new` button (shows modal with form to add new entity)
+  - Contacts section:
+    - Icons & links to your Github, LinkedIn, Facebook profiles
+3. Content consists of sections:
+  - `Search/Filter results` OR `Random item`:
+    - If user didn't submit filter the form, show random item from API
+    - If user submitted the form, show results **both** from API and user list as cards
+    - If no data found or error - show message instead of results
+    - If user cleared the form - show new random item from API
+    - Show only 12 first items and `Show more` button
+    - On `Show more` button click show 3 more items, repeat until there are items to show
+  - `My list`:
+    - If no entries in list or error - show message
+    - Show items as cards
+    - Add infinit scroll or pagination for this list (add support on backend side for this feature)
+
+#### Item card
