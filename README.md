@@ -202,6 +202,7 @@ Item card consists of the parts:
 
 - Show form with all necessary fields
 - Make some fields required (title, category, photo, recipe, etc)
+- User needs to provide a URL to image for new recipe (don't store images on server! just check if the URL is correct and try to request image from it), also he can change existing one
 - Add a couple of custom fields. Some ideas:
   - Cooking time
   - Rating
