@@ -196,7 +196,8 @@ Item card consists of the parts:
 
 - Show all available details about the item, such as a recipe, ingredients, video, custom fields, etc
 - Show the `Add to My List` / `Remove from My List` / `Delete item` button (depends on what item you are looking at now)
-- Show the `Edit item` button for items from My List.
+- Show the `Edit item` button for items from My List
+- Show the `Back` button for page OR `Close` button for modal
 
 #### Mew item | Edit item modal
 
