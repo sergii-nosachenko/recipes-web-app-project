@@ -2,7 +2,7 @@
 
 ![Meals/Cocktails Web App](https://glamadelaide.com.au/wp-content/uploads/2021/04/Madam-Hanoi_chilli-fest-MEAGHAN-COLES__MC11640.jpg)
 
-Your task is to create a web app that allows users to search for meal/cocktail recipes, store favourite ones and add new ones to DB.
+Your task is to create a web app that allows users to search for meal/cocktail recipes, store favorite ones and add new ones to DB.
 
 ## Technologie stack
 
