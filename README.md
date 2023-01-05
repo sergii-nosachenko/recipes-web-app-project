@@ -125,6 +125,8 @@ Generate color theme for your app: [Use palette generator](https://coolors.co/ge
 3. Show the **Sign-in page** if the user isn't authorized
 4. Show the **404 page** for unknown routes 
 
+Use this [Mate Academy topic](https://mate.academy/learn/nodejs/auth-nodejs) to learn about authorization.
+
 ### Sign-in page
 
 1. Show the form centered on the screen
