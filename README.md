@@ -14,7 +14,7 @@ Your task is to create a web app that allows users to search for meal/cocktail r
   - [Vue.js](https://vuejs.org/) (* only if you need to learn it)
   - [Angular](https://angular.io/) (* only if you need to learn it)
 - Data fetching & store (choose your option):
-  - [React Query](https://react-query-v3.tanstack.com/)
+  - [React Query](https://react-query-v3.tanstack.com/) 
   - [Redux Toolkit](https://redux-toolkit.js.org/)
   - [tRPC client](https://trpc.io/docs/quickstart) + [Zustand](https://github.com/pmndrs/zustand)
 - UI component library
@@ -25,6 +25,16 @@ Your task is to create a web app that allows users to search for meal/cocktail r
   - [Render](https://render.com/)
   - [Vercel](https://vercel.com/)
   - [Netlify](https://www.netlify.com/)
+  
+#### ![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white) Intro videos
+
+- [React in 100 Seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+- [Next.js in 100 Seconds // Plus Full Beginner's Tutorial](https://www.youtube.com/watch?v=Sklc_fQBmcs)
+- [Vue.js in 100 Seconds](https://www.youtube.com/watch?v=nhBVL41-_Cw)
+- [Angular in 100 Seconds](https://www.youtube.com/watch?v=Ata9cSC2WpM)
+- [React Query in 100 Seconds](https://www.youtube.com/watch?v=novnyCaa7To)
+- [Redux in 100 Seconds](https://www.youtube.com/watch?v=_shA5Xwe8_4)
+- [Why I Moved from RESTFUL APIs to tRPC instead in React](https://www.youtube.com/watch?v=wKs1C9TEess)
 
 ### Backend
 
@@ -49,6 +59,13 @@ Your task is to create a web app that allows users to search for meal/cocktail r
   - [Adaptable](https://adaptable.io/)
 - Typescript
 - ESLint, Prettier, and Pre-commit
+
+#### ![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white) Intro videos
+
+- [RESTful APIs in 100 Seconds // Build an API from Scratch with Node.js Express](https://www.youtube.com/watch?v=-MTSQjw5DrM)
+- [GraphQL Explained in 100 Seconds](https://www.youtube.com/watch?v=eIQh02xuVw4)
+- [Sequelize ORM](https://www.youtube.com/watch?v=0VjbB2lqhjU)
+- [Prisma in 100 Seconds](https://www.youtube.com/watch?v=rLRIB6AF2Dg)
 
 ## Roadmap
 
