@@ -114,7 +114,7 @@ Choose the UI component library you like:
   - [React Bulma](https://react-bulma.dev/en)
   - [Semantic UI React](https://react.semantic-ui.com/)
 
-You can find basic app design [here](https://www.figma.com/file/TCzDyN152kGZsz45rJRagq/Meals%2FCocktails-Web-App?node-id=0%3A1&t=E3LunTTq4C1JjOoa-1). It doesn't have styles and strict limitations - use it only as a reference. The overall look of your app depends on the UI library and your own ideas.
+You can find basic app design [here](https://www.figma.com/file/DdcajhVL0NNphGEmT8Rsir/Meals%2FCocktails-Web-App?node-id=0%3A1&t=fpDicI7s4TElemkv-1). It doesn't have styles and strict limitations - use it only as a reference. The overall look of your app depends on the UI library and your own ideas.
 
 Additional icons you can use:
 - [Choose any here](https://iconscout.com/blog/best-react-icons-library)
